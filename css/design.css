@@ -1,0 +1,188 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+    
+}
+body{
+background-color: mintcream;
+}
+
+nav{
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(214, 201, 192);
+    position: sticky;
+    border: 1px solid black;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color:steelblue;
+    border-bottom: 2px solid lightslategrey;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+nav > ul li:hover .sous{
+    display: block;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+
+@media all and (max-width: 1024px)
+{
+    .derniermessage, .nombremessages, .iconeTab{
+        display: none;
+    }
+}
+
+
+#banniere
+{
+width: 100%;
+height: 10rem;
+background-position: top; 
+margin-bottom: 0.5rem;
+background-image: url("../images/banniere.jpg");
+}
+
+#menu{
+    width: 10rem;
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: 1rem;
+    background-color: rgb(237,224,213);
+    margin-right: 1rem;
+}
+
+#corps_forum
+{
+  
+border: 1px solid black;
+width: 80%;
+margin-top: 0.5rem;
+margin-left: auto;
+margin-right: auto;
+padding: 5px;
+background-color: rgb(237,224,213);
+}
+form{
+    line-height: 1.5rem;
+}
+
+#footer
+{
+
+display: block;
+border: 1px solid black;
+width: 80%;
+margin-top: 1rem;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 2rem;
+padding: 0.3rem;
+background-color: rgb(237,224,213);
+}
+
+#error{color: red;}         /* A VOIR */
+
+.ico {width:2%}
+.titre { width:61%; }
+.nombremessages { width:2%; }
+.nombrevu { width:4%; }
+.nombresujets { width:2%; }
+.auteur { width:7%; }
+.derniermessage { width:18%; }
+.categorie { width:92%; background-color : rgb(244,238,250); }
+
+td { border: 1px solid black; background-color: rgb(253,244,223); vertical-align:top; }
+table { background-color: rgb(237,224,213); border: 1px solid black; }
+th { background-color: rgb(243,250,223); border: 1px solid black; }
+
+label {
+    display:inline-block;
+    padding-right: 0.5rem;
+    }
+    /*
+    width:10rem;
+    
+    }*/
+
+.button{
+    margin-left: 0.5rem;
+    box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:10px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}    
+
+.button:hover{
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+
+}
+
+.button:active{
+    position:relative;
+	top:1px;
+}

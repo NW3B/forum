@@ -1,0 +1,32 @@
+<body>
+<div id="banniere"></div>
+<div id="menu">        
+    <div class="element_menu">
+        <h3>Mes options</h3>
+        <ul>
+
+        <?php 
+            if($id==0){
+                echo '<li><a href="connexion.php">Connection</a></li>
+                      <li><a href="register.php">Inscrivez-vous</a></li> ';
+            }
+            else{
+                     echo '<li><a href="deconnexion.php">Déconnection</a></li>
+                        <li><a href="./voirprofil.php?m='.$_SESSION['id'].'&amp;action=consulter">Voir mon profil</a></li>
+                        ';
+            }
+        ?>           
+            <li>Page 2</li>
+        </ul>
+    </div>       
+    <div class="element_menu">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="index.php">Accueil</a></li>
+            <li>Page 1</li>
+            <li>Page 2</li>
+        </ul>
+    </div>        
+</div>
+<div id="corps_forum">
+
